@@ -52,6 +52,7 @@ def main():
         final_df = preprocess_data(df)
         train_data, test_data = train_test_split(final_df, test_size=0.2, random_state=42)
         save_data(train_data, test_data, data_path='data')
+        
     except Exception as e:
         print(f"Error: {e}")
         print("Failed to complete the data ingestion process.")
